@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:supeterlau/vercel-sls-node.git",
+  "author": "Peter Lau <superpeterlau@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "koa": "^2.13.0"
+  }
+}
