@@ -9,6 +9,7 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/api/item/:slug", (req, res) => {
+  console.log(req.params);
   const { slug } = req.params;
   res.end(`Item: ${slug}`);
 });
