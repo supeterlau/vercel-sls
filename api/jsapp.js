@@ -27,6 +27,10 @@ app.use(express.static(path.join(__dirname, "../public")));
 
 app.use(cors({ credentials: true, origin: true }));
 
+app.get("/", (req, res) => {
+  res.status(200).send({ message: "ok" });
+});
+
 app.get("/status", (req, res) => {
   res.status(200).send({ status: "ok" });
 });
