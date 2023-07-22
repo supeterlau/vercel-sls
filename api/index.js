@@ -36,7 +36,7 @@ app.get(GITHUB_CALLBACK, async (req, res) => {
         Accept: "application/json",
       },
     });
-    let data = await resp.text();
+    let data = await resp.json();
     console.log(data);
     res.redirect(`http://localhost:5173?access_token=${data.access_token}`);
   } catch (error) {
