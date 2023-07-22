@@ -26,17 +26,17 @@ app.get("/api/status", (req, res) => {
 
 const GITHUB_CALLBACK = "/api/auth/github/callback";
 
-// clien: preact/app
+// client: react/app
 app.get(GITHUB_CALLBACK, async (req, res) => {
   let url = `${GITHUB_URL}?client_id=${app_id}&client_secret=${app_secret}&code=${req.query.code}`;
   try {
-    let res = await fetch(url, {
+    let resp = await fetch(url, {
       method: "POST",
       headers: {
         Accept: "application/json",
       },
     });
-    let data = await res.text();
+    let data = await resp.text();
     console.log(data);
     res.redirect(`http://localhost:5173?access_token=${data.access_token}`);
   } catch (error) {
